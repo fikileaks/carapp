@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+// import React, { useState, useEffect } from 'react'
+// import CarList from './CarList'
+import React from 'react'
+import Layout from './Layout'
 
+// import axios from 'axios'
+// import CarDetail from './Contact'
+
+//! Elemen adalah halaman yang kita buat
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/*   const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
-export default App;
+  useEffect(() => {
+    setLoading(true)
+    axios
+      .get('https://rent-cars-api.herokuapp.com/customer/car')
+      .then((response) => {
+        // console.log(response)
+        setPosts(response.data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log(error)
+        setLoading(false)
+        setError(true)
+      })
+  }, []) */
+
+  return (
+    <div>
+      <Routes>
+        {/* <Route path='/' element={<CarList posts={posts} loading={loading} error={error} />}></Route> */}
+        <Route path='/' element={<Layout/>}></Route>
+
+      </Routes>
+    </div>
+  )
+}
+//! NESTED ROUTING DIBACA Y Y Y !!!
+export default App
